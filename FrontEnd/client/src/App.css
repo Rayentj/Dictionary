@@ -1,0 +1,108 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.App {
+  text-align: center;
+  height: 100vh; /* Use viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-image: url('../public/dict2.jpg');  /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.App-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Half-transparent grey */
+  padding: 40px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Form */
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #61dafb;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  background-color: #21a1f1;
+}
+
+/* Search Result */
+.SearchResult {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Popular Terms */
+.PopularTerms ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.PopularTerms li {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.PopularTerms li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

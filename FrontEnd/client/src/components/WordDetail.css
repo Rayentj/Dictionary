@@ -1,0 +1,38 @@
+/* src/components/WordDetail.css */
+/* src/components/WordDetail.css */
+.word-detail-container {
+    padding: 20px;
+    margin: 10px;
+    background-color:rgba(0, 0, 0, 0.5); /* Light background for contrast */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-height: 80vh; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .definitions-list {
+    display: flex;
+    flex-direction: column; /* Stack definitions vertically */
+  }
+  
+  .definition-item {
+    margin: 10px 0; /* Space between each definition */
+    padding: 15px;
+    background-color: #987777; /* White background for definitions */
+    border: 1px solid #ddd; /* Light border around each definition */
+    border-radius: 5px; /* Rounded corners for individual definitions */
+  }
+  
+  
+  .definitions-list {
+    display: flex;
+    flex-direction: column; /* Stack definitions vertically */
+  }
+  
+  .definition-item {
+    margin: 10px 0; /* Space between each definition */
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* White background for definitions */
+    border: 1px solid #ccc;
+    border-radius: 4px;}
+  
