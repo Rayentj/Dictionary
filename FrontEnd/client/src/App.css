@@ -106,3 +106,44 @@ button[type="submit"]:hover {
     transform: rotate(360deg);
   }
 }
+.play-button {
+  background-color: #61dafb; /* Adjust as needed */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  display: flex; /* Center the triangle */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-left: 1cm; /* Space of 1 cm from the "See More" button */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.play-button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+}
+
+.see-more-button {
+  padding: 10px 20px;
+  background-color: #61dafb; /* Light blue background */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.2rem; /* Font size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.see-more-button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+}
+
+.button-group {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+}
+

@@ -5,8 +5,10 @@ const SearchResult = ({ term, definition, wordtype, onSeeMore, onListen, index }
         <p><strong>Definition:</strong> {definition}</p>
         <p><strong>Type:</strong> {wordtype}</p>
         <div className="button-group">
-          <button onClick={onSeeMore}>See More</button> {/* Trigger the modal */}
-          <button onClick={() => onListen(term, index)}>Listen</button> {/* Trigger text-to-speech */}
+          <button className="see-more-button" onClick={onSeeMore}>See More</button>
+          <button className="play-button" onClick={() => onListen(term, index)}>
+            ▶ {/* Triangle for play button */}
+          </button>
         </div>
       </div>
     );

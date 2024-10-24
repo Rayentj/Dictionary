@@ -62,14 +62,20 @@ const handleSearch = async (searchTerm) => {
       if (!response.ok) {
         throw new Error('Failed to generate text-to-speech');
       }
-      const { audioUrl } = await response.json();
-      console.log('Audio URL:', audioUrl); // Log the audio URL for debugging
-      const audio = new Audio(audioUrl); // Play the returned audio URL
+  
+      // Create a blob from the response
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob); // Create a URL for the blob
+  
+      const audio = new Audio(audioUrl); // Play the audio from blob URL
       audio.play();
     } catch (error) {
       console.error('Error generating text-to-speech:', error);
     }
   };
+  
+  
+  
   
   
 
@@ -101,10 +107,13 @@ const handleSearch = async (searchTerm) => {
       <div key={index} className="word-detail">
         <h3>{def.wordtype}</h3>
         <p>{def.definition}</p>
+        <button className="play-button" onClick={() => handleListen(def.term, index)}>▶</button> {/* Play MP3 button */}
+        
       </div>
     ))}
   </div>
 </Modal>
+
 
     </div>
   );
